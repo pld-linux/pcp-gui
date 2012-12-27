@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 	DIST_ROOT=$RPM_BUILD_ROOT \
 	INSTALL="$(pwd)/install-sh" \
 	HAVE_BZIP2ED_MANPAGES=false \
-	HAVE_GZIPPED_MANPAGES=false
+	HAVE_ZIPPED_MANPAGES=false
 
 # could be eventually packaged in examplesdir
 %{__rm} -r $RPM_BUILD_ROOT%{_datadir}/pcp/demos
