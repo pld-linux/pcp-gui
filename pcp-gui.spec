@@ -1,12 +1,12 @@
 Summary:	Performance Co-Pilot GUI tools
 Summary(pl.UTF-8):	Performance Co-Pilot - narzędzia GUI
 Name:		pcp-gui
-Version:	1.5.6
+Version:	1.5.8
 Release:	1
 License:	LGPL v2.1 (libraries), GPL v2 (the rest)
 Group:		X11/Applications
 Source0:	ftp://oss.sgi.com/projects/pcp/download/%{name}-%{version}.src.tar.gz
-# Source0-md5:	15cc6394e617559bcf79490e1db37850
+# Source0-md5:	2dd78e3a51531166c8e1b84b8a819295
 URL:		http://oss.sgi.com/projects/pcp/
 BuildRequires:	QtAssistant-compat-devel >= 4
 BuildRequires:	QtCore-devel >= 4
@@ -76,6 +76,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/pmquery
 %attr(755,root,root) %{_bindir}/pmtime
 %attr(755,root,root) %{_libdir}/pcp/bin/pmsnap
+%dir %{_sysconfdir}/pcp/pmsnap
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/pcp/pmsnap/control
 %{_desktopdir}/pmchart.desktop
 %{_pixmapsdir}/pmchart.png
 %{_pixmapsdir}/pmtime.png
@@ -106,6 +108,5 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmchart/Syscalls
 %dir /var/lib/pcp/config/pmsnap
 %config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmsnap/Snap
-%config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmsnap/control
 %config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmsnap/crontab
 %config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmsnap/summary.html
