@@ -1,12 +1,12 @@
 Summary:	Performance Co-Pilot GUI tools
 Summary(pl.UTF-8):	Performance Co-Pilot - narzędzia GUI
 Name:		pcp-gui
-Version:	1.5.8
+Version:	1.5.9
 Release:	1
 License:	LGPL v2.1 (libraries), GPL v2 (the rest)
 Group:		X11/Applications
 Source0:	ftp://oss.sgi.com/projects/pcp/download/%{name}-%{version}.src.tar.gz
-# Source0-md5:	2dd78e3a51531166c8e1b84b8a819295
+# Source0-md5:	77b981c6e5a99bae71250d1b558d0106
 URL:		http://oss.sgi.com/projects/pcp/
 BuildRequires:	QtAssistant-compat-devel >= 4
 BuildRequires:	QtCore-devel >= 4
@@ -90,8 +90,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/pmtime.1*
 /var/lib/pcp/config/pmafm/pcp-gui
 %config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmchart/CPU
+%config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmchart/ApacheServer
 %config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmchart/Disk
 %config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmchart/Diskbytes
+%config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmchart/ElasticsearchServer
 %config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmchart/Filesystem
 %config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmchart/Loadavg
 %config(noreplace) %verify(not md5 mtime size) /var/lib/pcp/config/pmchart/Memory
