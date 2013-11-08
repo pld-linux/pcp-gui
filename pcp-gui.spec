@@ -1,12 +1,12 @@
 Summary:	Performance Co-Pilot GUI tools
 Summary(pl.UTF-8):	Performance Co-Pilot - narzędzia GUI
 Name:		pcp-gui
-Version:	1.5.10
+Version:	1.5.11
 Release:	1
 License:	LGPL v2.1 (libraries), GPL v2 (the rest)
 Group:		X11/Applications
 Source0:	ftp://oss.sgi.com/projects/pcp/download/%{name}-%{version}.src.tar.gz
-# Source0-md5:	876f651f9527fd4e7aa7b2a2e5977dda
+# Source0-md5:	b8cb1fbeaaa6bf78d227f47584a4ae4f
 URL:		http://oss.sgi.com/projects/pcp/
 BuildRequires:	QtAssistant-compat-devel >= 4
 BuildRequires:	QtCore-devel >= 4
