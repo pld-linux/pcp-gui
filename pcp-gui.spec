@@ -1,8 +1,9 @@
+# NOTE: since pcp 3.9.4 pcp-gui is integrated into main pcp sources
 Summary:	Performance Co-Pilot GUI tools
 Summary(pl.UTF-8):	Performance Co-Pilot - narzędzia GUI
 Name:		pcp-gui
 Version:	1.5.13
-Release:	1
+Release:	1.1
 License:	LGPL v2.1 (libraries), GPL v2 (the rest)
 Group:		X11/Applications
 Source0:	ftp://oss.sgi.com/projects/pcp/download/%{name}-%{version}.src.tar.gz
